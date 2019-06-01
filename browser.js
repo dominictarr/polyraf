@@ -1,8 +1,8 @@
 const RAF = require('random-access-web')({name: 'raw', storeName: 'raw'})
 
-module.exports = function (filename) {
+module.exports = function (filename, opts) {
   if('string' === typeof filename) {
-    const raf = RAF(filename)
+    const raf = RAF(filename, opts)
     raf.filename = filename
     return raf
   }
